@@ -611,9 +611,10 @@ void Travel::viewreceipt()
 	cout<<"enter your id to search"<<endl;
 	cin>>ids;
 	getchar();
-	fin.read((char *)&op,sizeof(op));
+//	fin.read((char *)&op,sizeof(op));
 	while(!fin.eof())
  		{
+ 		//	cout<<"hshshs";
  			fin.read((char *)&op,sizeof(op));
 
  			if(ids==op.id)
@@ -624,9 +625,11 @@ void Travel::viewreceipt()
 		cout<<"Gender = "<<op.gender<<endl;
 		cout<<"Date = "<<op.date<<endl;
 		cout<<"Destination = "<<op.destination<<endl;
+		break;
 
 	}
 }
+
 fin.close();
 //getchar();
 	
@@ -670,8 +673,9 @@ void Travel::receipt()
 		cout<<"Gender = "<<det.gender<<endl;
 		cout<<"Date = "<<det.date<<endl;
 		cout<<"Destination = "<<det.destination<<endl;
+		break;
         }
-	fin1.read((char *)&det,sizeof(det));
+	//fin1.read((char *)&det,sizeof(det));
 }
     fin1.close();
     int sum;
@@ -735,7 +739,7 @@ void Travel::details()
 		
 		
      }
-     fout.write((char *)&tr,sizeof(tr));
+     //fout.write((char *)&tr,sizeof(tr));
      //break;
      fout.close();
 }
